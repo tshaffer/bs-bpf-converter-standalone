@@ -8,10 +8,10 @@ import {
   getRotation,
 } from './converters';
 
-// import {
-//   baPeUiModelAddInteractiveCanvasState,
-//   baPeUiModelAddInteractiveCanvasEvent,
-// } from '@brightsign/ba-presentation-edit-ui';
+import {
+  baPeUiModelAddInteractiveCanvasState,
+  baPeUiModelAddInteractiveCanvasEvent,
+} from './bpfConverter';
 
 import {
   TransitionDisplayType,
@@ -1582,15 +1582,15 @@ function addStatesToZone(mediaStateContainer: DmMediaStateContainer, states: any
           dispatch(addCommandAction);
         });
 
-        // if (isNumber(state.x) && isNumber(state.y) && isString(mediaStateId) && mediaStateId.length > 0) {
-        //   dispatch(baPeUiModelAddInteractiveCanvasState({
-        //     id: mediaStateId,
-        //     position: {
-        //       x: state.x,
-        //       y: state.y,
-        //     }
-        //   }));
-        // }
+        if (isNumber(state.x) && isNumber(state.y) && isString(mediaStateId) && mediaStateId.length > 0) {
+          baPeUiModelAddInteractiveCanvasState({
+            id: mediaStateId,
+            position: {
+              x: state.x,
+              y: state.y,
+            }
+          });
+        }
       }
     });
     return eventData;
@@ -2031,11 +2031,12 @@ function buildInteractiveTransition(
       transitionDisplayLabelLocation = TransitionDisplayLabelLocationType.Right;
     }
 
-    // dispatch(baPeUiModelAddInteractiveCanvasEvent({
-    //   id: eventId,
-    //   displayType: transitionDisplayType,
-    //   labelLocation: transitionDisplayLabelLocation,
-    // }));
+    baPeUiModelAddInteractiveCanvasEvent({
+      id: eventId,
+      displayType: transitionDisplayType,
+      labelLocation: transitionDisplayLabelLocation,
+    });
+
     console.log(getState());
   };
 }

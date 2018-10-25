@@ -11,6 +11,15 @@ import {
   dmOpenSign,
   DmState,
 } from '@brightsign/bsdatamodel';
+import { 
+  BaPeUiInteractiveCanvasEvent,
+  BaPeUiInteractiveCanvasState,
+  BaPeUiModelInteractiveCanvasState,
+  BaPeUiInteractiveCanvasEventMap,
+  BaPeUiInteractiveCanvasStateMap,
+  BaPeUiInteractiveCanvasViewTransformMap,
+  BaProjectFileState,
+ } from '@brightsign/bacon-core';
 
 import {
   bpfToJson,
@@ -51,24 +60,6 @@ export function bsBpfCConvertPresentation(buffer: Buffer) : Function {
   };
 }
 
-// TODO - rework once non bsdm properties are added to bpfxState
-const createProjectFileStateFromState = (state: any): Object => {
-
-  // const bsDmState: DmState = state.bsdm;
-  if (!isObject(state.bsdm)){
-    debugger;
-  }
-  // if (!isObject(state.bapeui)){
-  //   debugger;
-  // }
-
-  const bpfxState: any = {};
-  bpfxState.bsdm = state.bsdm;
-  // bpfxState.interactiveCanvas = state.bapeui.interactiveCanvas;
-
-  return bpfxState;
-};
-
 // TODO - placeholder
 export const getBpfxState = (state : any) : any => {
   return null;
@@ -95,4 +86,46 @@ const createProjectFileState = (bsDmState: DmState): Object => {
     bsdm: bsDmState
   };
 };
+
+// TODO - rework once non bsdm properties are added to bpfxState
+const createProjectFileStateFromState = (state: any): Object => {
+
+  // const bsDmState: DmState = state.bsdm;
+  if (!isObject(state.bsdm)){
+    debugger;
+  }
+  // if (!isObject(state.bapeui)){
+  //   debugger;
+  // }
+
+  // let interactiveCanvasState: BaPeUiModelInteractiveCanvasState;
+  // interactiveCanvasState.statePositionById = {};
+  // interactiveCanvasState.eventDataById = {};
+  // interactiveCanvasState.viewTransformByZoneId = {};
+
+  // let baProjectFileState: BaProjectFileState;
+  // baProjectFileState.bsdm = state.bsdm;
+  // baProjectFileState.interactive = interactiveCanvasState;
+  const baProjectFileState: BaProjectFileState = {
+    bsdm: state.bsdm,
+    interactive: interactiveCanvasState
+  };
+
+  return baProjectFileState;
+};
+
+const interactiveCanvasState: BaPeUiModelInteractiveCanvasState = {
+  statePositionById: {},
+  eventDataById: {},
+  viewTransformByZoneId: {},
+};
+
+export function baPeUiModelAddInteractiveCanvasState(interactiveState: BaPeUiInteractiveCanvasState) {
+  interactiveCanvasState.statePositionById[interactiveState.id] = interactiveState;
+}
+
+export function baPeUiModelAddInteractiveCanvasEvent(interactiveEvent: BaPeUiInteractiveCanvasEvent) {
+  interactiveCanvasState.eventDataById[interactiveEvent.id] = interactiveEvent;
+}
+
 

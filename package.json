@@ -33,7 +33,7 @@
     "@brightsign/bsdatamodel": "0.11.1",
     "@brightsign/bsnconnector": "0.4.8",
     "@brightsign/fsconnector": "0.4.10",
-    "@brightsign/bacon-core": "git+ssh://git@git.brightsign.biz:bacon-core#603e3c91cf70c8d097ac0e4d077d74d10a50c844",
+    "@brightsign/bacon-core": "git+ssh://git@git.brightsign.biz:bacon-core#7465d74d3d27bdd19ef060054b9b5d4e51e35bbf",
     "@brightsign/bs-content-manager-store": "0.0.10",
     "@brightsign/bs-redux-enhancer": "0.0.6",
     "@brightsign/ba-uw-dm": ">=0.1.6",
