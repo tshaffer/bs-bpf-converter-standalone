@@ -34,9 +34,6 @@
     "@brightsign/bsnconnector": "0.4.8",
     "@brightsign/fsconnector": "0.4.10",
     "@brightsign/bacon-core": "git+ssh://git@git.brightsign.biz:bacon-core#7465d74d3d27bdd19ef060054b9b5d4e51e35bbf",
-    "@brightsign/bs-content-manager-store": "0.0.10",
-    "@brightsign/bs-redux-enhancer": "0.0.6",
-    "@brightsign/ba-uw-dm": ">=0.1.6",
     "@types/lodash": "^4.14.73",
     "@types/node": "^8.0.17",
     "@types/redux-thunk": "^2.1.0",
@@ -52,18 +49,15 @@
     "webpack": "^2.6.1"
   },
   "peerDependencies": {
-    "@brightsign/bs-content-manager": "0.5.15",
-    "@brightsign/bs-device-artifacts": "1.0.23",
-    "@brightsign/bs-playlist-dm": "0.1.10",
-    "@brightsign/bs-task-manager": "0.1.7",
     "@brightsign/bscore": "0.4.6",
     "@brightsign/bsdatamodel": "0.11.1",
     "@brightsign/bsnconnector": "0.4.8",
     "@brightsign/fsconnector": "0.4.10",
     "@brightsign/bacon-core": "git+ssh://git@git.brightsign.biz:bacon-core#7465d74d3d27bdd19ef060054b9b5d4e51e35bbf",
-    "@brightsign/bs-content-manager-store": "0.0.10",
-    "@brightsign/bs-redux-enhancer": "0.0.6",
-    "@brightsign/ba-uw-dm": ">=0.1.6"
+    "@brightsign/bs-content-manager": "0.5.15",
+    "@brightsign/bs-device-artifacts": "1.0.23",
+    "@brightsign/bs-playlist-dm": "0.1.10",
+    "@brightsign/bs-task-manager": "0.1.7"
   },
   "scripts": {
     "package-link": "npm link typescript webpack tslint",

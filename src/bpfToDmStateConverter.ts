@@ -16,7 +16,7 @@ import {
 import {
   TransitionDisplayType,
   TransitionDisplayLabelLocationType,
-} from '@brightsign/ba-uw-dm';
+} from '@brightsign/bacon-core';
 
 import {
   BsnDataFeedAssetType,
