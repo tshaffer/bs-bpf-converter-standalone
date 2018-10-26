@@ -120,10 +120,14 @@ const interactiveCanvasState: BaPeUiModelInteractiveCanvasState = {
   viewTransformByZoneId: {},
 };
 
+/** @internal */
+/** @private */
 export function baPeUiModelAddInteractiveCanvasState(interactiveState: BaPeUiInteractiveCanvasState) {
   interactiveCanvasState.statePositionById[interactiveState.id] = interactiveState;
 }
 
+/** @internal */
+/** @private */
 export function baPeUiModelAddInteractiveCanvasEvent(interactiveEvent: BaPeUiInteractiveCanvasEvent) {
   interactiveCanvasState.eventDataById[interactiveEvent.id] = interactiveEvent;
 }

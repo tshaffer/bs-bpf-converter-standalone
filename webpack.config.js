@@ -18,7 +18,13 @@ module.exports = {
     '@brightsign/bscore': 'commonjs @brightsign/bscore',
     '@brightsign/bsnconnector': 'commonjs @brightsign/bsnconnector',
     '@brightsign/fsconnector': 'commonjs @brightsign/fsconnector',
-    '@brightsign/bsdatamodel': 'commonjs @brightsign/bsdatamodel'
+    '@brightsign/bsdatamodel': 'commonjs @brightsign/bsdatamodel',
+    '@brightsign/bs-device-artifacts': 'commonjs @brightsign/bs-device-artifacts',
+    '@brightsign/bs-playlist-dm': 'commonjs @brightsign/bs-playlist-dm',
+    '@brightsign/bs-task-manager': 'commonjs @brightsign/bs-task-manager',
+    '@brightsign/bacon-core': 'commonjs @brightsign/bacon-core',
+    '@brightsign/bs-redux-enhancer': 'commonjs @brightsign/bs-redux-enhancer',
+    '@brightsign/ba-uw-dm': 'commonjs @brightsign/ba-uw-dm'
   },
   // target: 'electron',
   resolve: {
